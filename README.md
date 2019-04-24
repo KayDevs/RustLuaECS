@@ -9,3 +9,7 @@ So, this time I decided to make Systems the primary focus. Following the advice 
 The achilles heel of this engine, however, is this fact: communicating with Lua requires marshalling. Which is slow. It's also painfully redundant and time-consuming to write the same dozen variable names in the system's definition, in the serialized object definition, in getters, and in setters. This design got much further than my prior design, but it's still too time consuming for regular game development.
 
 I'm uploading it here for (my) education's sake.
+
+I might continue on it if I meet some personal requirements:
+1. I ditch get/set in favor of having each system expose their own functions to Lua, at their discretion of course.
+2. I have some mechanism to allow systems (Lua or native) to not have to keep track of the entities belonging to them. That should be managed somewhere else; it adds a lot of boilerplate when writing systems code.
